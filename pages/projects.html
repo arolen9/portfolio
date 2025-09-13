@@ -1,0 +1,53 @@
+<div class="content-wrapper">
+    <h1 class="page-title text-center">Showcase Projects</h1>
+    
+    <div class="space-y-12">
+        <!-- Project 1 -->
+        <div class="card overflow-hidden">
+            <div class="p-8">
+                <h2 class="section-title">Home Lab Security Operations Center (SOC)</h2>
+                <p class="text-brand-gray mb-6">
+                    <strong>Objective:</strong> To build a functional, miniature Security Operations Center within a home lab environment to simulate real-world threat detection and incident response scenarios.
+                </p>
+
+                <h4 class="font-semibold text-white mb-2">Methodology & Tools:</h4>
+                <ul class="list-disc list-inside text-brand-gray space-y-2 mb-6">
+                    <li>Deployed multiple VMs (Kali, Metasploitable) using <span class="tag">VMware</span>.</li>
+                    <li>Configured a segmented network with a <span class="tag">pfSense</span> firewall for traffic control and logging.</li>
+                    <li>Aggregated logs to a centralized <span class="tag">Splunk</span> instance for monitoring.</li>
+                    <li>Simulated attacks (port scans, web exploits) using <span class="tag">Metasploit</span> from a Kali attacker VM.</li>
+                    <li>Developed correlation searches and dashboards in Splunk to detect malicious activity based on the <span class="tag">MITRE ATT&CK</span> framework.</li>
+                </ul>
+
+                <h4 class="font-semibold text-white mb-2">Outcome & Key Learnings:</h4>
+                <p class="text-brand-gray">
+                    Successfully detected and analyzed simulated attacks in real-time. Gained hands-on experience in SIEM administration, rule creation, and dashboarding. Demonstrated proficiency in log analysis, network traffic inspection with <span class="tag">Wireshark</span>, and understanding the attacker lifecycle.
+                </p>
+            </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="card overflow-hidden">
+            <div class="p-8">
+                <h2 class="section-title">Web Application Vulnerability Assessment</h2>
+                <p class="text-brand-gray mb-6">
+                    <strong>Objective:</strong> To perform a comprehensive vulnerability assessment on a target web application (OWASP Juice Shop) to identify and report security flaws based on the OWASP Top 10.
+                </p>
+
+                <h4 class="font-semibold text-white mb-2">Methodology & Tools:</h4>
+                <ul class="list-disc list-inside text-brand-gray space-y-2 mb-6">
+                    <li>Used <span class="tag">Nmap</span> for port discovery and <span class="tag">Burp Suite</span> to map the application's structure.</li>
+                    <li>Ran automated scans with <span class="tag">OWASP ZAP</span> to identify initial vulnerabilities.</li>
+                    <li>Conducted manual testing for SQL Injection (<span class="tag">SQLmap</span>), XSS, and broken authentication.</li>
+                    <li>Intercepted traffic with Burp Suite to check for sensitive data exposure.</li>
+                    <li>Compiled a professional report detailing each vulnerability, its <span class="tag">CVSS</span> risk rating, and remediation steps.</li>
+                </ul>
+
+                <h4 class="font-semibold text-white mb-2">Outcome & Key Learnings:</h4>
+                <p class="text-brand-gray">
+                    Identified multiple critical and high-severity vulnerabilities. Mastered the use of industry-standard tools like Burp Suite. Developed the ability to not only find vulnerabilities but also to articulate business impact and provide actionable mitigation steps.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
