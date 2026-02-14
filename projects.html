@@ -1,0 +1,247 @@
+<div class="content-wrapper">
+    <h1 class="page-title text-center">Projects</h1>
+    
+    <div class="space-y-12">
+        <!-- Project 7 -->
+        <div class="card overflow-hidden">
+            <div class="p-8">
+                <div class="flex items-start mb-6">
+                    <div class="w-2/3 pr-8">
+                        <h2 class="section-title">Network Administration Security, Troubleshooting and Tools</h2>
+                        <div class="text-brand-gray">
+						<br>
+                            <h4 class="font-semibold text-white mb-2">Objectives:</h4>
+                            <ul class="list-disc list-inside space-y-2 mt-2">
+                                <li>Implement network device hardening through patch management</li>
+                                <li>Analyze CPU and network interface utilization to establish resource baselines</li>
+                                <li>Utilize system logs to monitor security events and troubleshoot technical issues</li>
+                                <li>Configure and manage operating system updates and service packs</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="w-1/3">
+                        <img src="./img/perf_mon.png" alt="TEST" class="max-w-full h-auto rounded-lg shadow-lg">
+                    </div>
+                </div>
+
+                <div class=""> 
+                    <h4 class="font-semibold text-white mb-2">Methodology & Tools:</h4>
+					<ul class="list-disc list-inside text-brand-gray space-y-2 mb-6">
+						<li>Used <span class="tag">Performance Monitor</span> to track system counters like % Processor Time and Bytes Received/sec to visualize resource usage</li>
+						<li>Employed  <span class="tag">Resource Monitor</span> for a user-friendly, detailed overview of <span class="tag">CPU</span>, <span class="tag">Memory</span>, <span class="tag">Disk</span> and <span class="tag">Network processes</span></li>
+						<li>Utilized <span class="tag">Event Viewer</span> to examine <span class="tag">Administrative</span>, <span class="tag">Security</span>, <span class="tag">System logs</span>, including triggering and identifying "Audit Failure" events</li>
+						<li>Used <span class="tag">Windows Update Utility</span> to navigate update settings, distinguish between "Important" and "Recommended" updates, and simulate selective installation</li>
+						<li>Used <span class="tag">Kali Linux</span> to execute a flood ping (<span class="tag">'hping3'</span>) to generate measurable network traffic for monitoring</li>
+					</ul>
+					<br>
+                    <h4 class="font-semibold text-white mb-2">Outcome & Key Learnings:</h4>
+                    <div class="text-brand-gray space-y-2">
+					<p class="text-brand-gray">
+						<li> <b>Baseline Significance:</b> Documenting idle system behavior (baselines) is essential for identifying abnormal activity during troubleshooting</li> 
+						<li> <b>Proactive Security:</b> Regular installation of critical updates is a primary defense against known vulnerabilities and external threats</li> 
+						<li> <b>Event Categorization:</b> Differentiated between event types (Critical, Error, Warning, Information) to prioritize system maintenance tasks</li> 
+						<li> <b>Resource Impact:</b> Demonstrated how specific administrative tasks (like disk defragmenting) or network traffic spikes can impact overall system responsiveness.</li>
+					</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Project 6 -->
+		<div class="card overflow-hidden">
+			<div class="p-8 flex">
+				<div class="w-3/4 pr-8">
+					<h2 class="section-title">Deploying a Honeypot</h2>
+					<p class="text-brand-gray mb-6">
+						<strong>Objectives:</strong>
+						<ul class="list-disc list-inside text-brand-gray space-y-2 mb-6">
+							<li>To create a honeypot web server that logs intrusion attempts</li>
+							<li>To observe attacker behavior and learn who’s probing the network service (ordinary users wouldn’t	visit it)</li>
+						</ul>
+					</p>
+					<h4 class="font-semibold text-white mb-2">Methodology & Tools:</h4>
+					<ul class="list-disc list-inside text-brand-gray space-y-2 mb-6">
+						<li>Accessed <span class="tag">Kali</span> Linux and <span class="tag">Windows Server 2022</span> virtual machines using provided credentials. </li>
+						<li>Opened a terminal in <span class="tag">Kali</span> and retrieved IP address using <code class="western"><b><span class="tag">ip addr</span></b></code>. </li>
+						<li>Launched <span class="tag">PenTBox</span>	with root privileges using <code class="western"><b><span class="tag">sudo ./pentbox-1.8/pentbox.rb</span></b></code>. </li>
+						<li>Selected “<span class="tag">Network tools → Honeypot</span>” from the PenTBox menu.</li>
+						<li>Under “Manual Configuration” entered port <code class="western">80 </code>and entered the message: <code class="western">"You shouldn't be here!"</code> as the fake site content. </li>
+						<li>Enabled logging and confirmed default log name. </li>
+						<li>Navigated to Kali’s fake Web Server page using <span class="tag">Firefox</span> on the Windows Server. </li>
+						<li>Verified honeypot response and intrusion detection logs in Kali’s terminal. </li>
+					</ul>
+
+					<h4 class="font-semibold text-white mb-2">Outcome & Key Learnings:</h4>
+					<p class="text-brand-gray">
+						<li>Demonstrated how honeypots can detect unauthorized access attempts. </li>
+						<li>Showed how simple deception can reveal probing behavior from potential attackers. </li>
+						<li>Reinforced the importance of monitoring unused or unexpected services. </li>
+						<li>Highlighted the value of logging and analyzing intrusion data for network security. </li>
+					</p>
+				</div>
+
+				<div class="w-1/4 flex items-center justify-center">
+					<img src="./img/penbox.png" alt="TEST" class="max-w-full h-auto rounded-lg shadow-lg">
+				</div>
+			</div>
+		</div>
+
+        <!-- Project 5 -->
+        <div class="card overflow-hidden">
+            <div class="p-8">
+                <h2 class="section-title">Home Lab Security Operations Center (SOC)</h2>
+                <p class="text-brand-gray mb-6">
+                    <strong>Objective:</strong> To build a functional, miniature Security Operations Center within a home lab environment to simulate real-world threat detection and incident response scenarios.
+                </p>
+
+                <h4 class="font-semibold text-white mb-2">Methodology & Tools:</h4>
+                <ul class="list-disc list-inside text-brand-gray space-y-2 mb-6">
+                    <li>Deployed multiple VMs (Kali, Metasploitable) using <span class="tag">VMware</span>.</li>
+                    <li>Configured a segmented network with a <span class="tag">pfSense</span> firewall for traffic control and logging.</li>
+                    <li>Aggregated logs to a centralized <span class="tag">Splunk</span> instance for monitoring.</li>
+                    <li>Simulated attacks (port scans, web exploits) using <span class="tag">Metasploit</span> from a Kali attacker VM.</li>
+                    <li>Developed correlation searches and dashboards in Splunk to detect malicious activity based on the <span class="tag">MITRE ATT&CK</span> framework.</li>
+                </ul>
+
+                <h4 class="font-semibold text-white mb-2">Outcome & Key Learnings:</h4>
+                <p class="text-brand-gray">
+                    Successfully detected and analyzed simulated attacks in real-time. Gained hands-on experience in SIEM administration, rule creation, and dashboarding. Demonstrated proficiency in log analysis, network traffic inspection with <span class="tag">Wireshark</span>, and understanding the attacker lifecycle.
+                </p>
+            </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="card overflow-hidden">
+            <div class="p-8">
+                <h2 class="section-title">Web Application Vulnerability Assessment</h2>
+                <p class="text-brand-gray mb-6">
+                    <strong>Objective:</strong> To perform a comprehensive vulnerability assessment on a target web application (OWASP Juice Shop) to identify and report security flaws based on the OWASP Top 10.
+                </p>
+
+                <h4 class="font-semibold text-white mb-2">Methodology & Tools:</h4>
+                <ul class="list-disc list-inside text-brand-gray space-y-2 mb-6">
+                    <li>Used <span class="tag">Nmap</span> for port discovery and <span class="tag">Burp Suite</span> to map the application's structure.</li>
+                    <li>Ran automated scans with <span class="tag">OWASP ZAP</span> to identify initial vulnerabilities.</li>
+                    <li>Conducted manual testing for SQL Injection (<span class="tag">SQLmap</span>), XSS, and broken authentication.</li>
+                    <li>Intercepted traffic with Burp Suite to check for sensitive data exposure.</li>
+                    <li>Compiled a professional report detailing each vulnerability, its <span class="tag">CVSS</span> risk rating, and remediation steps.</li>
+                </ul>
+
+                <h4 class="font-semibold text-white mb-2">Outcome & Key Learnings:</h4>
+                <p class="text-brand-gray">
+                    Identified multiple critical and high-severity vulnerabilities. Mastered the use of industry-standard tools like Burp Suite. Developed the ability to not only find vulnerabilities but also to articulate business impact and provide actionable mitigation steps.
+                </p>
+            </div>
+        </div>
+		<!-- Project 3 -->
+        <div class="card overflow-hidden">
+			<div class="p-8">
+				<h2 class="section-title">Exploiting and Hardening Windows</h2>
+				<p class="text-brand-gray mb-6">
+					<strong>Objective:</strong> To demonstrate the importance of securing an operating system.
+				</p>
+
+				<div style="display: flex; align-items: flex-start; gap: 20px;">
+					<div>
+						<h4 class="font-semibold text-white mb-2">Methodology & Tools:</h4>
+						<ul class="list-disc list-inside text-brand-gray space-y-2 mb-6">
+							<li>From <span class="tag">Kali Linux</span> attacking machine ran <span class="tag">Nmap</span> to scan Windows Server to determine open ports and services, revealing vulnerabilities like an open FTP (port 21) and HTTP (port 80).</li>
+							<li>Used <span class="tag">FTP</span> command to connect to the target FTP server to test for anonymous access and file upload/download capabilities.</li>
+							<li>Used <span class="tag">Metasploit</span> Penetration Testing Framework to exploit the Windows Server using a known vulnerability, specifically the MS17-010 (SMB) exploit, then <span class="tag">smbclient</span> command to enumerate file shares on the Windows Server to test for unauthenticated shares.</li>
+							<li>Post-exploitation, used <span class="tag">net user</span> command to add an unauthorized administrative account.</li>
+							<li>Removed the Web Server (IIS) role, which included the insecure default website and anonymous FTP service, using <span class="tag">Server Manager</span> </li>
+							<li>Deactivated the default guest account to prevent anonymous access and block the vulnerability used during exploitation <span class="tag">net user guest /active:no </span></li>
+							<li>Viewed the administrative accounts to identify any unauthorized users that may have been created: <span class="tag">net localgroup administrators</span> and disabled the unauthorized hacker account created during the exploitation phase: <span class="tag">net user hacker /active:no</span></li>
+
+						</ul>                                                                                                                                     
+					</div>
+					<div>
+						<img src="./img/metasploit.png" alt="Metasploit Framework exploitation screen" style="max-width: 450px; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border: 5px solid #b697c4;">
+					</div>
+				</div>
+
+				<h4 class="font-semibold text-white mb-2">Outcome & Key Learnings:</h4>
+				<p class="text-brand-gray">
+					Exploitation is easy when systems are unpatched/misconfigured; Vulnerability of Clear-Text Protocols and Default Services was demonstarted; Effective hardening prevents exploitation; Importance of Best Practices: disabling the guest account alone was enough to prevent the MS17-010 exploit from running.
+				</p>
+			</div>
+        </div>
+		<!-- Project 2 -->
+		
+		<div class="card overflow-hidden">
+			<div class="p-8 flex">
+				<div class="w-2/3 pr-8">
+					<h2 class="section-title">Windows Registry Analysis</h2>
+					<p class="text-brand-gray mb-6">
+						<strong>Objective:</strong> To capture a live Windows Registry's hive files, analyze the live Windows Registry using regedit, analyze an offline FTK image of the Windows registry using Windows Registry Recovery (WRR).
+					</p>
+
+					<h4 class="font-semibold text-white mb-2">Methodology & Tools:</h4>
+					<ul class="list-disc list-inside text-brand-gray space-y-2 mb-6">
+						<li>Identified the Windows Registry as a critical database for system forensics and malware analysis.</li>
+						<li>Used <span class="tag">regedit</span> command to view and edit registry keys which are associated with the system settings and the programs installed; viewed TCP/IP settings, startup programs, and language settings.</li>
+						<li>Obtained a Live Windows Registry with <span class="tag">FTK Imager</span> and saved a copy (backup) on disk for editing.</li>
+						<li>Analyzed the Registry Files with <span class="tag">MiTeC</span> Windows Registry Recovery <span class="tag">(WRR.exe)</span></li>
+						<li>Inspected <span class="tag">SAM file</span> (Security Account Manager) - this file holds all the account informaon for the users and groups on the computer.</li>
+						<li>Viewed system Install Date, Startup Applications, Services and Drivers.</li>
+						<li>Inspected Network Configuration <span class="tag">TCP/IP</span> settings and User info <span class="tag">NTUSER.DAT</span>.</li>
+					</ul>
+
+					<h4 class="font-semibold text-white mb-2">Outcome & Key Learnings:</h4>
+					<p class="text-brand-gray">
+						Viewing a live registry is <strong>dangerous</strong> due risk of system corruption. A safer, better approach is to examine an <strong>offline registry</strong>. To do this, use <span class="tag">FTK Imager</span> to extract the files and then use <span class="tag">MiTeC Windows Registry Recovery</span> to analyze them. The MiTeC tool provides a much <strong>easier and more readable interface</strong> for viewing registry values compared to the standard <span class="tag">regedit</span>.
+					</p>
+				</div>
+
+				<div class="w-1/3 flex items-center justify-center">
+					<img src="./img/registry.png" alt="Windows Registry Analysis and Forensics" class="max-w-full h-auto rounded-lg shadow-lg">
+				</div>
+			</div>
+		</div>
+			    <!-- Project 1 -->
+		
+		<div class="card overflow-hidden">
+			<div class="p-8 flex">
+				<div class="pr-8">
+					<h2 class="section-title">Implementing Security Policies on Windows and Linux</h2>
+					<p class="text-brand-gray mb-6">
+						<strong>Objective:</strong> To implement basic security hardening measures on two operating systems: Microsoft Windows 10 and the Ubuntu (Linux) 8.04 virtual machines.
+					</p>
+
+					<h4 class="font-semibold text-white mb-2">Methodology & Tools:</h4>
+					<ul class="list-disc list-inside text-brand-gray space-y-2 mb-6">
+						<ins>Securing Windows Logon and Implementing a Warning Banner:</ins>
+						<li>Ran <span class="tag">Netplwiz.exe</span> to open the User Accounts login configuration. </li>
+						<li>Disabled the <strong>automatic login</strong> feature to require a username and password upon logon.</li>
+						<li>Opened the <span class="tag">Group Policy Management Console</span> using <span class="tag">gpedit.msc</span>.</li>
+						<li>Configured the <strong>Interactive logon: Message text</strong> policy to display "Unauthorized use is prohibited".</li>
+						<li>Configured the <strong>Interactive logon: Message title</strong> policy to display "Warning!" prior to the logon screen.</li>
+						<br>
+
+						<ins>Auditing Logon Failures on Windows:</ins>
+						<li>Simulated a failed login.</li>
+						<li>Opened <span class="tag">Computer Management</span> and viewed the <strong>Security log</strong> in <span class="tag">Event Viewer</span> and confirmed that <strong>"Audit Failure" logs</strong> were not being recorded by default.</li>
+						<li>Opened the<span class="tag"> Group Policy Management Console</span> using <span class="tag">gpedit.msc</span>.</li>
+						<li>Enabled the <strong>Failure</strong> setting for the <strong>Audit account logon events</strong> in <span class="tag">Audit Policy</span> policy.</li>
+						<li>Signed out, attempted a failed login again, and logged back in.</li>
+						<li>Returned to the <strong>Security log</strong> and confirmed the new <strong>Audit Failure</strong> event was successfully logged.</li>
+						<br>
+						<ins>Securing Linux Services and Firewall:</ins>
+						<li>Ran the command <span class="tag">zenmap</span> (still on Windows machine) and <strong>scanned</strong> the Ubuntu machine to reveal all open ports.</li>
+						<li>Identified and observed insecure open services, such as <span class="tag">Telnet (Port 23).</span></li>
+						<li>Used the command <span class="tag">telnet</span> to connect to Ubuntu.</li>
+						<li>Set the Linux kernel firewall's default input policy to <strong>DROP</strong> all incoming traffic using <span class="tag">iptables -P INPUT DROP.</span></li>
+						<li>Added a specific rule to <strong>ALLOW</strong> web traffic on <strong>Port 80</strong> with <span class="tag">iptables -A INPUT -i eth0 -p tcp --dport 80 -j ACCEPT.</span></li>
+						<li>Scanned the Ubuntu host again from the Windows host using <span class="tag">zenmap</span>.</li>
+						<li>Confirmed that <strong>only Port 80</strong> was now <strong>open</strong>, verifying the successful firewall hardening.</li>					</ul>
+
+					<h4 class="font-semibold text-white mb-2">Outcome & Key Learnings:</h4>
+					<p class="text-brand-gray">
+						Out-of-the-box OSs (both Windows and Linux) contain vulnerabilities that, if unpatched/reconfigured, pose a significant deficit in an organization's security posture.
+					</p>
+				</div>
+
+			</div>
+		</div>
+    </div>
+</div>
